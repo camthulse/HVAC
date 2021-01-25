@@ -1,0 +1,45 @@
+/*Variables*/
+$blue-500: #3B82F6;
+$blue-600: #2563EB;
+$indigo-50: #EEF2FF;
+$white-ghost: #F8F8FF;
+$white: #FFFFFF;
+
+/*Globals*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+    border: 2px solid blue;
+}
+a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 1.0);
+    :hover{
+        text-decoration: none;
+        color: rgba(0, 0, 0, 0.8);
+    }
+}
+
+/*Header Section*/
+div#header-wrapper{
+    
+}
+    /*Notification Bar*/
+    /*Navigation Bar*/
+
+/*Banner Section*/
+
+/*Who Section*/
+
+/*Affiliation Section*/
+
+/*Footer Section*/
+    /*Google Map*/
+    /*Contact*/
+    /*Business Hours*/

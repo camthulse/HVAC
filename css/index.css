@@ -1,0 +1,37 @@
+/*Variables*/
+/*Globals*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+  border: 2px solid blue;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a :hover {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+/*Header Section*/
+/*Notification Bar*/
+/*Navigation Bar*/
+/*Banner Section*/
+/*Who Section*/
+/*Affiliation Section*/
+/*Footer Section*/
+/*Google Map*/
+/*Contact*/
+/*Business Hours*/
+/*# sourceMappingURL=index.css.map */
