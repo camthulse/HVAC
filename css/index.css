@@ -14,8 +14,10 @@ html {
 }
 
 body {
+  position: relative;
   min-width: 100vw;
   min-height: 100vh;
+  height: 100%;
   overflow-x: hidden;
 }
 
@@ -32,6 +34,7 @@ a :hover {
 /*Header Section*/
 div#header-wrapper {
   position: relative;
+  z-index: 9999;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -39,7 +42,6 @@ div#header-wrapper {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  z-index: 9999;
   --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   -webkit-box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
           box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -286,6 +288,9 @@ div#header-wrapper #notification-wrapper #notification-right a#give-call :hover 
 
 /*Navigation Bar*/
 #navbar-wrapper {
+  position: relative;
+  background-color: #FFFFFF;
+  z-index: 9999;
   max-width: 100vw;
   width: 100%;
   height: 9vh;
@@ -338,10 +343,213 @@ div#header-wrapper #notification-wrapper #notification-right a#give-call :hover 
 }
 
 /*Banner Section*/
-/*Who Section*/
+#banner-wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 85vh;
+}
+
+#banner-wrapper #banner-text {
+  position: relative;
+  left: 15.8rem;
+  top: 12.5rem;
+  z-index: 50;
+}
+
+#banner-wrapper #banner-text :nth-child(1) {
+  color: #3B82F6;
+}
+
+#banner-wrapper #banner-text :nth-child(2) {
+  color: #374151;
+}
+
+#banner-wrapper #banner-text h1 {
+  font-size: 46pt;
+  line-height: 48pt;
+  font-weight: 800;
+}
+
+#banner-wrapper #banner-text h3 {
+  padding-top: 2rem;
+  color: #374151;
+  font-size: 26pt;
+  line-height: 26pt;
+  max-width: 32rem;
+  font-weight: 700;
+}
+
+#banner-wrapper #banner-text #banner-btn {
+  position: relative;
+  top: 3rem;
+  left: 1rem;
+  font-size: 26pt;
+  line-height: 26pt;
+  font-weight: 700;
+  color: #3B82F6;
+  border-radius: 15rem;
+  padding: 0.75rem 2.5rem 0.75rem 2.5rem;
+  background-color: #FFFFFF;
+  --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+          box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+#banner-wrapper #banner-text #banner-btn:hover {
+  color: #2563EB;
+  --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  -webkit-box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+          box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+#banner-wrapper #banner-img {
+  position: fixed;
+  top: -5vh;
+  left: 2vw;
+  overflow: hidden;
+  z-index: 0;
+}
+
+#banner-wrapper #banner-img #banner-img_src {
+  width: 100%;
+  height: auto;
+  -webkit-filter: blur(6px);
+          filter: blur(6px);
+}
+
+/*Page Wrapper*/
+#page-wrapper {
+  position: relative;
+  width: 100vw;
+  height: 200vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+          box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  background-color: #FFFFFF;
+  z-index: 9999;
+  /*Who Section*/
+}
+
+#page-wrapper #who-wrapper {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 100vw;
+  height: 32rem;
+  background-color: #3B82F6;
+}
+
+#page-wrapper #who-wrapper #who-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  /*Gradient*/
+  background: #3b82f6;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(59, 130, 246, 0.563445)), color-stop(18%, rgba(59, 130, 246, 0.6)), color-stop(37%, #3b82f6), to(#3b82f6));
+  background: linear-gradient(90deg, rgba(59, 130, 246, 0.563445) 0%, rgba(59, 130, 246, 0.6) 18%, #3b82f6 37%, #3b82f6 100%);
+}
+
+#page-wrapper #who-wrapper #who-left {
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 100%;
+}
+
+#page-wrapper #who-wrapper #who-left #left-text {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #FFFFFF;
+  position: absolute;
+  bottom: 1rem;
+  left: 6rem;
+  font-size: 20pt;
+  line-height: 42pt;
+  max-width: 32rem;
+  text-align: center;
+  z-index: 150;
+  text-shadow: 1px 1px 11px rgba(0, 0, 0, 0.35);
+}
+
+#page-wrapper #who-wrapper #who-left #left-img {
+  position: absolute;
+  z-index: 0;
+  max-width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+}
+
+#page-wrapper #who-wrapper #who-left #left-img #left-img_src {
+  width: 100%;
+  height: auto;
+  -webkit-filter: blur(0.15rem);
+          filter: blur(0.15rem);
+}
+
+#page-wrapper #who-wrapper #who-right {
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 100%;
+}
+
+#page-wrapper #who-wrapper #who-right #right-text {
+  position: absolute;
+  right: 6rem;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #FFFFFF;
+  z-index: 150;
+  text-shadow: 1px 1px 11px rgba(0, 0, 0, 0.35);
+  text-align: center;
+}
+
+#page-wrapper #who-wrapper #who-right #right-text h2 {
+  font-size: 26pt;
+  line-height: 30pt;
+  z-index: 150;
+  max-width: 38rem;
+}
+
+#page-wrapper #who-wrapper #who-right #right-text p {
+  font-size: 18pt;
+  line-height: 20pt;
+  z-index: 150;
+  max-width: 42rem;
+}
+
 /*Affiliation Section*/
 /*Footer Section*/
 /*Google Map*/
 /*Contact*/
 /*Business Hours*/
+/*~~~Media Queries~~~*/
 /*# sourceMappingURL=index.css.map */

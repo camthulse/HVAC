@@ -7,6 +7,7 @@
     $white: #FFFFFF;
     $black-ghost: #1F2937;
     $black: #111827;
+    $gray-700: #374151;
     /*Measurements*/
     $view-width: 100vw;
 
@@ -20,8 +21,10 @@ html{
     font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 body{
+    position: relative;
     min-width: 100vw;
     min-height: 100vh;
+    height: 100%;
     overflow-x: hidden;
 }
 a{
@@ -36,9 +39,9 @@ a{
 /*Header Section*/
 div#header-wrapper{
     position: relative;
+    z-index: 9999;
     display: flex;
     flex-direction: column;
-    z-index: 9999;
     --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
     /*Notification Bar*/
@@ -192,6 +195,9 @@ div#header-wrapper{
 
 /*Navigation Bar*/
 #navbar-wrapper{
+    position: relative;
+    background-color: $white;
+    z-index: 9999;
     max-width: 100vw;
     width: 100%;
     height: 9vh;
@@ -231,9 +237,161 @@ div#header-wrapper{
 
 /*Banner Section*/
 #banner-wrapper{
-    
+    position: relative;
+    overflow: hidden;
+    height: 85vh;
+    #banner-text{
+        position: relative;
+        left: 15.8rem;
+        top: 12.5rem;
+        z-index: 50;
+        :nth-child(1){
+            color: $blue-500;
+        }
+        :nth-child(2){
+            color: $gray-700;
+        }
+        h1{
+            font-size: 46pt;
+            line-height: 48pt;
+            font-weight: 800;
+        }
+        h3{
+            padding-top: 2rem;
+            color: $gray-700;
+            font-size: 26pt;
+            line-height: 26pt;
+            max-width: 32rem;
+            font-weight: 700;
+        }
+        #banner-btn{
+            position: relative;
+            top: 3rem;
+            left: 1rem;
+            font-size: 26pt;
+            line-height: 26pt;
+            font-weight: 700;
+            color: $blue-500;
+            border-radius: 15rem;
+            padding: 0.75rem 2.5rem 0.75rem 2.5rem;
+            background-color: $white;
+            --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+        }
+        #banner-btn:hover{
+            color: $blue-600;
+            --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+        }
+    }
+    #banner-img{
+        position: fixed;
+        top: -5vh;
+        left: 2vw;
+        overflow: hidden;
+        z-index: 0;
+        #banner-img_src{
+            width: 100%;
+            height: auto;
+            filter: blur(6px);
+        }
+    }
 }
-/*Who Section*/
+
+/*Page Wrapper*/
+#page-wrapper{
+    position: relative;
+    
+    width: 100vw;
+    height: 200vh;
+    box-sizing: border-box;
+    --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    background-color: $white;
+    z-index: 9999;
+    /*Who Section*/
+    #who-wrapper{
+        position: relative;
+        display: flex;
+        max-width: 100vw;
+        height: 32rem;
+        background-color: $blue-500;
+        #who-overlay{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 100;
+            /*Gradient*/
+            background: rgb(59,130,246);
+            background: linear-gradient(90deg, rgba(59,130,246,0.5634454465379901) 0%, rgba(59,130,246,0.6) 18%, rgba(59,130,246,1) 37%, rgba(59,130,246,1) 100%); 
+        }
+        #who-left{
+            position: relative;
+            flex: 1;
+            height: 100%;
+            #left-text{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: $white;
+                position: absolute;
+                bottom: 1rem;
+                left: 6rem;
+                font-size: 20pt;
+                line-height: 42pt;
+                max-width: 32rem;
+                text-align: center;
+                z-index: 150;
+                text-shadow: 1px 1px 11px rgba(0, 0, 0, 0.35);
+            }
+            #left-img{
+                position: absolute;
+                z-index: 0;
+                max-width: 100%;
+                max-height: 100%;
+                overflow: hidden;
+                #left-img_src{
+                    width: 100%;
+                    height: auto;
+                    filter: blur(0.15rem);
+                }
+            }
+        }
+        #who-right{
+            position: relative;
+            flex: 1;
+            height: 100%;
+            #right-text{
+                position: absolute;
+                right: 6rem;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                color: $white;
+                z-index: 150;
+                text-shadow: 1px 1px 11px rgba(0, 0, 0, 0.35);
+                text-align: center;
+                h2{
+                    font-size: 26pt;
+                    line-height: 30pt;
+                    z-index: 150;
+                    max-width: 38rem;
+                }
+                p{
+                    font-size: 18pt;
+                    line-height: 20pt;
+                    z-index: 150;
+                    max-width: 42rem;
+                }
+            }
+        }
+    }
+}
 
 /*Affiliation Section*/
 
@@ -241,3 +399,6 @@ div#header-wrapper{
     /*Google Map*/
     /*Contact*/
     /*Business Hours*/
+
+
+/*~~~Media Queries~~~*/
