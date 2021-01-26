@@ -1,13 +1,14 @@
 /*Variables*/
-$blue-500: #3B82F6;
-$blue-600: #2563EB;
-$indigo-50: #EEF2FF;
-$white-ghost: #F8F8FF;
-$white: #FFFFFF;
-$black-ghost: #1F2937;
-$black: #111827;
-
-$view-width: 100vw;
+    /*Colors*/
+    $blue-500: #3B82F6;
+    $blue-600: #2563EB;
+    $indigo-50: #EEF2FF;
+    $white-ghost: #F8F8FF;
+    $white: #FFFFFF;
+    $black-ghost: #1F2937;
+    $black: #111827;
+    /*Measurements*/
+    $view-width: 100vw;
 
 /*Globals*/
 *{
@@ -42,7 +43,7 @@ div#header-wrapper{
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
     /*Notification Bar*/
     #notification-wrapper{
-        width: 100vw;
+        width: 100%;
         height: 6vh;
         background-color: $white-ghost;
         display: flex;
@@ -92,6 +93,23 @@ div#header-wrapper{
             height: 100%;
             justify-content: center;
             align-items: center;
+            #call-button{
+                display: flex;
+                justify-content: end;
+                align-items: center;
+                flex: 1;
+                height: 100%;
+            }
+            #social-media{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex: 1;
+                height: 100%;
+                :nth-child(2){
+                    padding-left: 1.1rem;
+                }
+            }
             a#give-call{
                 display: flex;
                 justify-content: center;
@@ -171,6 +189,7 @@ div#header-wrapper{
         }
     }
 }
+
 /*Navigation Bar*/
 #navbar-wrapper{
     max-width: 100vw;
@@ -179,8 +198,8 @@ div#header-wrapper{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 4rem;
-    padding-right: 8rem;
+    padding-left: 6rem;
+    padding-right: 12rem;
     #navbar-title{
         h1{
             color: $blue-500;
@@ -196,7 +215,7 @@ div#header-wrapper{
             display: flex;
             flex-direction: row;
             justify-content: space-evenly;
-            min-width: 35vw;
+            min-width: 30vw;
             .list-item{
                 a.item-link{
                     color: $blue-500;
@@ -211,7 +230,9 @@ div#header-wrapper{
 }
 
 /*Banner Section*/
-
+#banner-wrapper{
+    
+}
 /*Who Section*/
 
 /*Affiliation Section*/
