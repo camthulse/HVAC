@@ -346,7 +346,7 @@ div#header-wrapper #notification-wrapper #notification-right a#give-call :hover 
 #banner-wrapper {
   position: relative;
   overflow: hidden;
-  height: 85vh;
+  height: 65vh;
 }
 
 #banner-wrapper #banner-text {
@@ -404,8 +404,8 @@ div#header-wrapper #notification-wrapper #notification-right a#give-call :hover 
 
 #banner-wrapper #banner-img {
   position: fixed;
-  top: -5vh;
-  left: 2vw;
+  top: 0;
+  right: 0;
   overflow: hidden;
   z-index: 0;
 }
@@ -420,6 +420,13 @@ div#header-wrapper #notification-wrapper #notification-right a#give-call :hover 
 /*Page Wrapper*/
 #page-wrapper {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100vw;
   height: 200vh;
   -webkit-box-sizing: border-box;
@@ -427,9 +434,10 @@ div#header-wrapper #notification-wrapper #notification-right a#give-call :hover 
   --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   -webkit-box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
           box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-  background-color: #FFFFFF;
+  background-color: #FFFCF8;
   z-index: 9999;
   /*Who Section*/
+  /*Quote Section*/
 }
 
 #page-wrapper #who-wrapper {
@@ -437,7 +445,7 @@ div#header-wrapper #notification-wrapper #notification-right a#give-call :hover 
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 100vw;
+  width: 100vw;
   height: 32rem;
   background-color: #3B82F6;
 }
@@ -544,6 +552,140 @@ div#header-wrapper #notification-wrapper #notification-right a#give-call :hover 
   line-height: 20pt;
   z-index: 150;
   max-width: 42rem;
+}
+
+#page-wrapper #quote-wrapper {
+  margin-top: 4rem;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #FFFFFF;
+  width: 45vw;
+  height: 85vh;
+  border-radius: 5rem 5rem 5rem 5rem;
+  -webkit-box-shadow: 0px 0px 24px 0px rgba(31, 41, 55, 0.43);
+  box-shadow: 0px 0px 24px 0px rgba(31, 41, 55, 0.43);
+}
+
+#page-wrapper #quote-wrapper #quote-header {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  top: 0;
+  min-width: 100%;
+  min-height: 15%;
+  border-radius: 5rem 5rem 0 0;
+  background-color: #F8F8FF;
+}
+
+#page-wrapper #quote-wrapper #quote-header h1 {
+  width: 100%;
+  font-size: 42pt;
+  line-height: 42pt;
+  font-weight: 700;
+  color: #374151;
+  text-shadow: 1px 1px 2px #969696;
+}
+
+#page-wrapper #quote-wrapper #form-wrapper {
+  color: #3B82F6;
+  width: 50%;
+}
+
+#page-wrapper #quote-wrapper #form-wrapper #quote-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+#page-wrapper #quote-wrapper #form-wrapper #quote-form *:not(:first-child) {
+  margin-top: 2rem;
+}
+
+#page-wrapper #quote-wrapper #form-wrapper #quote-form input {
+  border: 0;
+  border-bottom: 1px solid rgba(56, 66, 82, 0.25);
+  outline: 0;
+  width: 100%;
+  color: #3B82F6;
+  font-size: 12pt;
+  line-height: 16pt;
+}
+
+#page-wrapper #quote-wrapper #form-wrapper #quote-form input::-webkit-input-placeholder {
+  color: #374151;
+}
+
+#page-wrapper #quote-wrapper #form-wrapper #quote-form input:-ms-input-placeholder {
+  color: #374151;
+}
+
+#page-wrapper #quote-wrapper #form-wrapper #quote-form input::-ms-input-placeholder {
+  color: #374151;
+}
+
+#page-wrapper #quote-wrapper #form-wrapper #quote-form input::placeholder {
+  color: #374151;
+}
+
+#page-wrapper #quote-wrapper #form-wrapper #quote-form textarea {
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgba(56, 66, 82, 0.25);
+  outline: 0;
+  color: #3B82F6;
+  font-size: 12pt;
+  line-height: 16pt;
+  text-overflow: wrap;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+#page-wrapper #quote-wrapper #form-wrapper #quote-form textarea::-webkit-input-placeholder {
+  color: #374151;
+}
+
+#page-wrapper #quote-wrapper #form-wrapper #quote-form textarea:-ms-input-placeholder {
+  color: #374151;
+}
+
+#page-wrapper #quote-wrapper #form-wrapper #quote-form textarea::-ms-input-placeholder {
+  color: #374151;
+}
+
+#page-wrapper #quote-wrapper #form-wrapper #quote-form textarea::placeholder {
+  color: #374151;
 }
 
 /*Affiliation Section*/

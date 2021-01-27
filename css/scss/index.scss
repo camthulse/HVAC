@@ -4,6 +4,7 @@
     $blue-600: #2563EB;
     $indigo-50: #EEF2FF;
     $white-ghost: #F8F8FF;
+    $offwhite: #FFFCF8; 
     $white: #FFFFFF;
     $black-ghost: #1F2937;
     $black: #111827;
@@ -239,7 +240,7 @@ div#header-wrapper{
 #banner-wrapper{
     position: relative;
     overflow: hidden;
-    height: 85vh;
+    height: 65vh;
     #banner-text{
         position: relative;
         left: 15.8rem;
@@ -286,8 +287,8 @@ div#header-wrapper{
     }
     #banner-img{
         position: fixed;
-        top: -5vh;
-        left: 2vw;
+        top: 0;
+        right: 0;
         overflow: hidden;
         z-index: 0;
         #banner-img_src{
@@ -301,19 +302,20 @@ div#header-wrapper{
 /*Page Wrapper*/
 #page-wrapper{
     position: relative;
-    
+    display: flex;
+    flex-direction: column;
     width: 100vw;
     height: 200vh;
     box-sizing: border-box;
     --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-    background-color: $white;
+    background-color: $offwhite;
     z-index: 9999;
     /*Who Section*/
     #who-wrapper{
         position: relative;
         display: flex;
-        max-width: 100vw;
+        width: 100vw;
         height: 32rem;
         background-color: $blue-500;
         #who-overlay{
@@ -387,6 +389,82 @@ div#header-wrapper{
                     line-height: 20pt;
                     z-index: 150;
                     max-width: 42rem;
+                }
+            }
+        }
+    }
+    /*Quote Section*/
+    #quote-wrapper{
+        margin-top: 4rem;
+        position: relative;
+        display: flex;
+        justify-self: center;
+        align-self: center;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $white;
+        width: 45vw;
+        height: 85vh;
+        border-radius: 5rem 5rem 5rem 5rem;
+        -webkit-box-shadow: 0px 0px 24px 0px rgba(31,41,55,0.43); 
+        box-shadow: 0px 0px 24px 0px rgba(31,41,55,0.43);
+        #quote-header{
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            top: 0;
+            min-width: 100%;
+            min-height: 15%;
+            border-radius: 5rem 5rem 0 0;
+            background-color: $white-ghost;
+            h1{
+                width: 100%;
+                font-size: 42pt;
+                line-height: 42pt;
+                font-weight: 700;
+                color: $gray-700;
+                text-shadow: 1px 1px 2px rgba(150, 150, 150, 1);
+            }
+        }
+        #form-wrapper{
+            color: $blue-500;
+            width: 50%;
+            #quote-form{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: start;
+                *:not(:first-child){
+                    margin-top: 2rem;
+                }
+                input{
+                    border: 0;
+                    border-bottom: 1px solid hsla(217, 19%, 27%, 0.25);
+                    outline: 0;
+                    width: 100%;
+                    color: $blue-500;
+                    font-size: 12pt;
+                    line-height: 16pt;
+                    &::placeholder{
+                        color: $gray-700;
+                    }
+                }
+                textarea{
+                    width: 100%;
+                    height: 100%;
+                    border: 1px solid hsla(217, 19%, 27%, 0.25);
+                    outline: 0;
+                    color: $blue-500;
+                    font-size: 12pt;
+                    line-height: 16pt;
+                    text-overflow: wrap;
+                    &::placeholder{
+                        color: $gray-700;
+                    }
+                    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
                 }
             }
         }
