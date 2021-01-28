@@ -9,6 +9,7 @@
     $black-ghost: #1F2937;
     $black: #111827;
     $gray-700: #374151;
+    $gray: #2C2C34;
     /*Measurements*/
     $view-width: 100vw;
 
@@ -35,6 +36,15 @@ a{
         text-decoration: none;
         color: $black-ghost;
     }
+}
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
 }
 
 /*Header Section*/
@@ -305,7 +315,7 @@ div#header-wrapper{
     display: flex;
     flex-direction: column;
     width: 100vw;
-    height: 200vh;
+    height: 100%;
     box-sizing: border-box;
     --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -409,6 +419,7 @@ div#header-wrapper{
         border-radius: 5rem 5rem 5rem 5rem;
         -webkit-box-shadow: 0px 0px 24px 0px rgba(31,41,55,0.43); 
         box-shadow: 0px 0px 24px 0px rgba(31,41,55,0.43);
+        z-index: 50;
         #quote-header{
             position: absolute;
             display: flex;
@@ -432,6 +443,7 @@ div#header-wrapper{
         #form-wrapper{
             color: $blue-500;
             width: 50%;
+            padding-top: 4rem;
             #quote-form{
                 display: flex;
                 flex-direction: column;
@@ -461,22 +473,189 @@ div#header-wrapper{
                     font-size: 12pt;
                     line-height: 16pt;
                     text-overflow: wrap;
+                    padding: 0.5rem;
                     &::placeholder{
                         color: $gray-700;
                     }
                     font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
                 }
+                #quote-submit{
+                    align-self: center;
+                    font-size: 26pt;
+                    line-height: 26pt;
+                    font-weight: 700;
+                    color: $white;
+                    border-radius: 15rem;
+                    padding: 0.75rem 2.5rem 0.75rem 2.5rem;
+                    background-color: $blue-500;
+                    --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+                    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+                    &:hover{
+                        color: $offwhite;
+                        --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+                        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+                    }
+                }
+            }
+        }
+    }
+    #background-shape{
+        width: 100vw;
+        height: auto;
+        position: absolute;
+        bottom: 55rem;
+        left: 0;
+        z-index: 0;
+    }
+    /*Affiliation Section*/
+    #affil-wrapper{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $white-ghost;
+        height: 55rem;
+        padding-top: 1rem;
+        padding-bottom: 10rem;
+        #affil-header{
+            height: 50%;
+            font-size: 30pt;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 700;
+            color: $gray-700;
+            text-shadow: 1px 1px 2px rgba(150, 150, 150, 1);
+            margin-bottom: 2rem;
+            h1{
+                line-height: 32pt;
+            }
+        }
+        #affil-photos{
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            :nth-child(1){
+                margin-right: 8rem;
+            }
+            #affil_airtemp{
+                height: 12rem;
+                width: auto;
+            }
+            #affil_newagain{
+                height: 10.5rem;
+                width: auto;
             }
         }
     }
 }
 
-/*Affiliation Section*/
-
 /*Footer Section*/
-    /*Google Map*/
-    /*Contact*/
-    /*Business Hours*/
-
+#footer-wrapper{
+    overflow: hidden;
+    display: flex;
+    gap: 2rem;
+    flex-direction: row;
+    width: 100vw;
+    background-color: $white;
+    height: 35vh;
+    z-index: 9999;
+    padding: 2rem 4rem 2rem 4rem;
+    #footer-map{
+        flex: 1;
+        height: 100%;
+        overflow: hidden;
+        border-radius: 34px;
+        iframe{
+            width: 100%;
+            height: 100%;
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+    #footer-contact{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        flex: 1;
+        height: 100%;
+        overflow: hidden;
+        border-radius: 34px;
+        padding: 0 6rem 0 6rem;
+        #contact-header{
+            color: $gray;
+            text-align: center;
+            font-size: 38pt;
+            line-height: 38pt;
+            font-weight: 700;
+            color: $gray-700;
+            text-shadow: 1px 1px 2px rgba(150, 150, 150, 1);
+            margin-bottom: 1.25rem;
+        }
+        div{
+            color: $gray-700;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            border-bottom: 2px solid $gray;
+            :nth-child(2){
+                color: $blue-500;
+                font-weight: 600;
+            }
+        }
+    }
+    #footer-hours{
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        flex: 1;
+        height: 100%;
+        overflow: hidden;
+        border-radius: 34px;
+        padding: 0 6rem 0 6rem;
+        #hours-header{
+            color: $gray;
+            text-align: center;
+            font-size: 38pt;
+            line-height: 38pt;
+            font-weight: 700;
+            color: $gray-700;
+            text-shadow: 1px 1px 2px rgba(150, 150, 150, 1);
+            margin-bottom: 1.25rem;
+        }
+        div{
+            position: relative;
+            color: $gray-700;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            border-bottom: 2px solid $gray;
+            min-height: 2rem;
+            :nth-child(1){
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                height: 2rem;
+                width: 2rem;
+                color: $gray-700;
+            }
+            :nth-child(2){
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                color: $blue-500;
+                font-weight: 600;
+                font-size: 20pt;
+            }
+            #hours-2_number{
+                font-size: 20pt;
+                &:hover{
+                    color: $blue-600;
+                }
+            }
+        }
+    }
+}
 
 /*~~~Media Queries~~~*/

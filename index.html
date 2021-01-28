@@ -1,3 +1,6 @@
+<?php
+    
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -94,20 +97,61 @@
                 <h1>Get a Free Quote</h1>
             </div>
             <div id="form-wrapper">
-                <form id="quote-form" action="sum.php?">
-                    <input type="text" name="name" id="quote-name" placeholder="Name">
-                    <input type="tel" name="phone" id="quote-phone" placeholder="Phone">
-                    <input type="email" name="email" id="quote-email" placeholder="Email">
-                    <textarea name="msg" id="quote-msg" cols="30" rows="10" style="resize: none;" placeholder="I was wondering about rates and when I could get this done:"></textarea>
+                <form id="quote-form" method="post" action="/function.php">
+                    <input type="text" name="name" id="quote-name" placeholder="Name" autocomplete="off">
+                    <input type="tel" name="phone" id="quote-phone" placeholder="Phone" autocomplete="off">
+                    <input type="email" name="email" id="quote-email" placeholder="Email" autocomplete="off">
+                    <textarea name="msg" id="quote-msg" cols="30" rows="10" style="resize: none;" placeholder="I was wondering about the cost of something or how long it would take to get it done." autocomplete="off"></textarea>
+                    <br/>
+                    <button type="submit" id="quote-submit">Submit</button>
                 </form>
             </div>
         </div>
+        <img id="background-shape" src="/img/bottomshape.svg">
         <div id="affil-wrapper">
-
+            <div id="affil-header">
+                <h1>Our Affiliations</h1>
+            </div>
+            <div id="affil-photos">
+                <img id="affil_airtemp" src="/img/airtemp.png">
+                <img id="affil_newagain" src="/img/newagain.svg">
+            </div>
         </div>
-    </div>
-    <div id="footer-wrapper">
-
+        <div id="footer-wrapper">
+            <div id="footer-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6409.361109997125!2d-82.2761469645089!3d36.56181461292445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1611790957810!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+            <div id="footer-contact">
+                <h1 id="contact-header">Contact Us</h1>
+                <div id="contact-1">
+                    <h1>Weekdays</h1>
+                    <h1>9:00am - 4:30pm</h1>
+                </div>
+                <div id="contact-2">
+                    <h1>Saturday</h1>
+                    <h1>10:00am - 2:30pm</h1>
+                </div>
+                <div id="contact-3">
+                    <h1>Sunday</h1>
+                    <h1>Closed</h1>
+                </div>
+            </div>
+            <div id="footer-hours">
+                <h1 id="hours-header">Business Hours</h1>
+                <div id="hours-1">
+                    <img src="/img/icon/icon_pin.svg">
+                    <h1>Tri-Cities, TN</h1>
+                </div>
+                <div id="hours-2">
+                    <img src="/img/icon/icon_phone.svg">
+                    <a id="hours-2_number" href="tel:423-646-9096">(423) 646 9096</a>
+                </div>
+                <div id="hours-3">
+                    <img src="/img/icon/icon_mail.svg">
+                    <h1>calvin_cook@email.com</h1>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
