@@ -5,5 +5,5 @@ This is a front end website built utilizing HTML/SCSS/PHP.
 
 Visit The Website: https://camthulse.github.io/HVAC/
 
-# YEAH BOI
-*italics* **bold**
+# Figma Design
+![Figma design file - Desktop View](/Figma/FigmaDesign_Desktop.pdf "Figma design file - Desktop View")
