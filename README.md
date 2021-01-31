@@ -10,4 +10,5 @@ Visit The Website: https://camthulse.github.io/HVAC/
 
 
 # Work In Progress
+1/28/2021 : Finished development on desktop view.
 1/29/2021 : Starting development on mobile view.
