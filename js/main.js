@@ -1,0 +1,9 @@
+$(document).ready(function(){
+    $('#burger-btn').click(function(){
+        if($('#mobile-navlist').hasClass('open')){
+            $('#mobile-navlist').removeClass('open');
+        }else{
+            $('#mobile-navlist').addClass('open');
+        }
+    });
+});
