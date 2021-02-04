@@ -4,7 +4,7 @@ Design files made in Figma and handed off to VS Code for developing. <br />
 This is a front end website built utilizing HTML/SCSS/PHP.
 
 Visit The Website: https://camthulse.github.io/HVAC/ <br />
-<span style="color: red; font-size: 6pt;">(Fair warning this website may not show well in the github.io hosting link above)</span>
+<span style="color: red;"> (Fair warning this website may not show well in the github.io hosting link above) </span>
 
 # Figma Design
 ![Figma design file - Desktop View](/Figma/FigmaDesign_Desktop.pdf "Figma design file - Desktop View") <br />
