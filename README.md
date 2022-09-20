@@ -3,9 +3,9 @@
 Design files made in Figma and handed off to VS Code for developing. <br />
 This is a front end website built utilizing HTML/SCSS/PHP.
 
-Visit The Website: [HVAC OnePage - GitHub Host](https://camthulse.github.io/HVAC/) <br />
+<s>Visit The Website: [HVAC OnePage - GitHub Host](https://camthulse.github.io/HVAC/) <br /></s>
 *(Fair warning this website may not show well in the github.io hosting link above)* <br /><br />
-*If the above link does not work please give this one a try [HVAC OnePage - Tiiny Host](https://hvac.tiiny.site/)*
+<s>*If the above link does not work please give this one a try [HVAC OnePage - Tiiny Host](https://hvac.tiiny.site/)*</s>
 
 # Figma Design
 ![Figma design file - Desktop View](/Figma/FigmaDesign_Desktop.pdf "Figma design file - Desktop View") <br />
