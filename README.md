@@ -3,6 +3,8 @@
 Design files made in Figma and handed off to VS Code for developing. <br />
 This is a front end website built utilizing HTML/SCSS/PHP.
 
+*(These links are no longer functional. The files will need to be downloaded and ran/hosted locally to view the website.)* <br />
+
 <s>Visit The Website: [HVAC OnePage - GitHub Host](https://camthulse.github.io/HVAC/) <br /></s>
 *(Fair warning this website may not show well in the github.io hosting link above)* <br /><br />
 <s>*If the above link does not work please give this one a try [HVAC OnePage - Tiiny Host](https://hvac.tiiny.site/)*</s>
